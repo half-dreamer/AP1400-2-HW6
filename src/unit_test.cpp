@@ -20,6 +20,7 @@ TEST(HW6Test, TEST2) {
     auto min = q1::gradient_descent(0.01, 0.01, [](double a){return sin(a)+cos(a);});
     EXPECT_NEAR(min, -2.36, 0.01);
 }
+
 TEST(HW6Test, TEST3) {
     struct Func
     {
@@ -37,7 +38,6 @@ TEST(HW6Test, TEST4) {
     auto min = q1::gradient_descent<double, Func>(0.0, 0.01);
     EXPECT_NEAR(min, -1.57, 0.01);
 }
-*/
 TEST(HW6Test, TEST5) {
     std::vector<q2::Patient> patients = q2::read_file("lung_cancer.csv");
     EXPECT_EQ(patients.size(), 59);
@@ -63,7 +63,7 @@ TEST(HW6Test, TEST6) {
     EXPECT_EQ(patients[30].name, "Jane Wyman");
     EXPECT_EQ(patients[58].name, "Joan Crawford");
 }
-/*
+*/
 TEST(HW6Test, TEST7) {
     auto flights = q3::gather_flights("flights.txt");
 
@@ -76,7 +76,7 @@ TEST(HW6Test, TEST7) {
     std::vector<std::string> correct{"9725", "QR720", "MA127", "9724", "QR492", "GH758"};
     EXPECT_EQ(flight_numbers, correct);
 }
-
+/*
 TEST(HW6Test, TEST8) {
     std::vector<q4::Sensor> sensors{{{0, 0.01}, 0.5},
                                 {{0.5, 0.009}, 0.2}};
